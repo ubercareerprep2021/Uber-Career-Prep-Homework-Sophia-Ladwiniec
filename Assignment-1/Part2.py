@@ -1,13 +1,13 @@
 def isStringPermutation(s1, s2):
     if(len(s1) != len(s2)):
         return False
-    for character in s1: 
-        if character in s2:
-            s2 = s2.replace(character, "")
-    
-    if(len(s2) == 0):
+
+    s1 = sorted(s1)
+    s2 = sorted(s2)
+
+    if(s1 == s2):
         return True 
-    return False 
+    return False
 
 def pairsThatEqualSum(inputArray, targetSum):
     differences = set()
